@@ -1,6 +1,10 @@
 import express from "express";
 
-import { getData, postData } from "../controllers/nut-cracker.js";
+import {
+  getData,
+  postResultOfBinaryTree,
+  samplePost,
+} from "../controllers/nut-cracker.js";
 
 const router = express.Router();
 
@@ -8,7 +12,9 @@ const router = express.Router();
 router.get("/", getData);
 
 // @POST
-router.post("/", postData);
+
+router.post("/", postResultOfBinaryTree);
+router.post("/sample", samplePost);
 
 export default router;
 
